@@ -1,7 +1,5 @@
 import java.util.Scanner;
-import java.io.*;
 import java.util.Random; 
-import java.util.Arrays;
 public class AsciiChars {
 
 	static boolean testYes(String value) {
@@ -68,9 +66,7 @@ public class AsciiChars {
 			for (int i=0; i<3; i++) {
 				randomNumbers[i]= rng.nextInt(65)+1;
 			}
-			System.out.println("Enter a random number between 1 and 3");
-			Integer random1=userInput.nextInt();
-			Integer magicball=jersey*random1;
+			Integer magicball=jersey*randomNumbers[1];
 			if(magicball>75){
 				Integer magicballnew= magicball-75;
 				System.out.println("The magic ball number is:"+ magicballnew);
@@ -82,7 +78,7 @@ public class AsciiChars {
 			System.out.println("The magic ball number is:" + magicball);
 			Integer QAL= jersey+age+lucky;
 			Integer PM= age+model;
-			Integer RR= random-random1;
+			Integer RR= random-randomNumbers[1];
 			Integer ML= model+lucky;
 			System.out.println("Lottery numbers: " + QAL + "," + PM + "," + 42 + "," + RR + "," + ML +" " + "Magic ball:" + magicball); 
 			}
